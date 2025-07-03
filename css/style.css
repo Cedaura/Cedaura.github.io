@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url("header.css");
+@import url("projets.css");
+@import url("mecontacter.css");
+@import url("competences.css");
+
+
+
+
+*{ margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+h1{display:flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+        font-size: 32px;
+           font-family: "Roboto", sans-serif;
+}
+
+footer p{margin-top: 500px;
+}
+
+#creations h2{font-size: 20px;
+    font-family: "Roboto", sans-serif;
+}
+
+#about h2{    font-size: 32px;
+    text-align: center;
+    margin-bottom: 10px; 
+    margin-top: 20px;
+        font-family: "Roboto", sans-serif;
+}
+
+.menu-list li a {
+  text-decoration: none;
+  color: black;
+}
+
+label {
+  background-color: cadetblue;
+ }
+
+.carousel{display: flex;
+    justify-content: center;
+    margin-top: 150px;
+      width: 100%;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+#about p {max-width: 600px; 
+    line-height: 1.6;
+       margin: 0 auto;
+       margin-top: 0; 
+}
+
+.image p{font-family: "Roboto", sans-serif;
+    margin-top: 20px;
+     text-align: center;
+}
+
+
+
+.carousel-images {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 150px;
+}
+
+.carousel .image {
+  text-align: center;
+  max-width: 400px;
+  font-family: "Roboto", sans-serif;
+}
+

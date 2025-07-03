@@ -1,0 +1,43 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: cadetblue;
+}
+
+.logo_container{
+  width:2em;
+
+}
+
+
+#menu-list{display: none;
+  background-color: cadetblue;
+
+}
+
+.img .img src{display:flex;
+justify-content: center;
+
+}
+#menu-list.hidden{display:flex;
+
+
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0; /* optionnel : espace autour */
+}
+
+
+#menu-list li {
+    background-color: cadetblue;
+    padding: 10px 15px;
+    border-radius: 5px; /* optionnel, pour coins arrondis */
+    margin-bottom: 5px; /* espace entre les items */
+}
+
