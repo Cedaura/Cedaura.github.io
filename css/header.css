@@ -22,8 +22,6 @@ justify-content: center;
 
 }
 #menu-list.hidden{display:flex;
-
-
 }
 
 .img {
@@ -39,5 +37,6 @@ justify-content: center;
     padding: 10px 15px;
     border-radius: 5px; /* optionnel, pour coins arrondis */
     margin-bottom: 5px; /* espace entre les items */
+    font-family: "Roboto", sans-serif;
 }
 
