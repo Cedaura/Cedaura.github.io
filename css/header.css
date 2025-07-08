@@ -6,10 +6,21 @@
     background-color: cadetblue;
 }
 
-.logo_container{
-  width:2em;
 
-}
+    .logo_container {
+      width: 5em;
+      background: transparent; /* Retire le fond */
+      border: none;            /* Supprime les bordures */
+      margin: 0;
+      padding: 0;
+    }
+
+ .logo_container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      background: transparent; /* Fond transparent pour l’image */
+    }
 
 
 #menu-list{display: none;
