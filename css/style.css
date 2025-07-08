@@ -11,6 +11,7 @@
 *{ margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 
@@ -22,7 +23,16 @@ h1{display:flex;
            font-family: "Roboto", sans-serif;
 }
 
-footer p{margin-top: 500px;
+footer p {
+  text-align: left;
+  margin: 2rem 1rem 1rem 1rem; 
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+footer {
+  background-color: #FDFCFB;
+  padding: 1rem;
 }
 
 #creations h2{font-size: 20px;
@@ -36,9 +46,15 @@ footer p{margin-top: 500px;
         font-family: "Roboto", sans-serif;
 }
 
-.menu-list li a {
+#menu-list li a {
   text-decoration: none;
   color: black;
+
+}
+#menu-list {
+  list-style: none; 
+  gap: 1.5rem; 
+
 }
 
 label {
