@@ -12,14 +12,22 @@ async function chargerMenu() {
     const html = await reponse.text();
     header.innerHTML = html;
 
+    let menuBtn = document.getElementById('menu-btn');
+    let menulist = document.getElementById('menu-list');
+    menuBtn.addEventListener('click', function () {
+      menulist.classList.toggle('hidden');
+      menuBtn.classList.toggle('expanded');
+ 
+    });
+
+    
+
+
+
   } catch (erreur) {
     console.error('Erreur :', erreur);
   }
 
- let menuBtn = document.getElementById('menu-btn');
- let menulist = document.getElementById('menu-list');
-menuBtn.addEventListener('click', function() {
-menulist.classList.toggle('hidden');
-menuBtn.classList.toggle('expanded');});
+
 }
 

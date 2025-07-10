@@ -4,6 +4,11 @@
     align-items: center;
     padding: 20px;
     background-color: cadetblue;
+    z-index: 110;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
 }
 
     .logo_container {
@@ -17,7 +22,9 @@
 
 }
 
-#menu-list.hidden{display:flex;
+#menu-list.hidden {
+    display: flex;
+    flex-direction: column;
 }
 
 #menu-list li {
@@ -30,8 +37,23 @@
 
 .avatar{
   position: absolute;
-  top: 15%;
+  top: 25%;
   left:10%;
-  z-index: 100;
+  z-index: 130;
+}
+
+@media screen and (min-width: 768px) {
+    #menu-list {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+    .navbar {
+        justify-content: center;
+    }
+    #menu-btn {
+        display: none;
+    }
+  
 }
 
