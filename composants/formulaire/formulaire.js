@@ -1,14 +1,24 @@
-document.addEventListener("DOMContentLoaded", chargerFormulaire);
+document.addEventListener("DOMContentLoaded", chargerFormContact);
 
-function chargerFormulaire(){
+function chargerFormContact() {
     const formContact = document.getElementById("carte-contact");
-    console.log("formContact")
-    const formContactLoad = fetch("/composants/formulaire/formulaire.html");
-   console.log("formContactLoad")
-formContact.innerHTML = formContactLoad;
-console.log(formContact.innerHTML);
-
-
+    console.log(formContact);
+    fetch("/composants/formulaire/formulaire.html")
+        .then(response => response.text("formulaire de contact trouvé"))
+        .then(html => {
+            formContact.innerHTML = html;
+            console.log(formContact.innerHTML);
+  
+        })
+        .then(() => {
+            // Ajouter les événements après l'injection du HTML
+            const btnFormulaire = document.getElementById('btn-formulaire');
+            if (btnFormulaire) {
+                btnFormulaire.addEventListener('click', function () {
+                    formContact.classList.toggle('turn');
+                });
+            }
+        })
+        .catch(error => console.error('Error loading form contact:', error));
 }
-
 
