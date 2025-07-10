@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-@import url("header.css");
-@import url("projets.css");
-@import url("mecontacter.css");
-@import url("competences.css");
-@import url("footer.css");
+@import url("/composants/header/header.css");
+@import url("/css/projets.css");
+@import url("/css/mecontacter.css");
+@import url("/css/competences.css");
+@import url("/composants/footer/footer.css");
 
 
 
@@ -70,16 +70,18 @@ label {
   padding: 2rem;
 }
 
+
 #about p {max-width: 600px; 
     line-height: 1.6;
        margin: 0 auto;
        margin-top: 0; 
-}
+       font-family: roboto, sans-serif;
+       }
 
 .image p{font-family: "Roboto", sans-serif;
     margin-top: 20px;
      text-align: center;
-}
+  }
 
 main{
   background-color: #FDFCFB;
@@ -100,3 +102,42 @@ main{
   font-family: "Roboto", sans-serif;
 }
 
+
+ #about {
+    max-width: 650px;
+    margin: 50px auto;
+    padding: 30px 40px;
+    background: linear-gradient(135deg, #ffffffee, cadetblue);
+    border-radius: 18px;
+    box-shadow:
+      0 8px 20px rgba(12, 125, 133, 0.15),
+      0 0 0 3px transparent;
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #3a3a3a;
+    cursor: default;
+    transition: box-shadow 0.4s ease, border-color 0.4s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards ease-out;
+  }
+
+  #about:hover {
+    box-shadow:
+      0 12px 30px rgba(93, 190, 177, 0.3),
+      0 0 0 3px cadetblue;
+  }
+
+  /* animation fade in + montée */
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  #about p {
+    margin: 0;
+  }
