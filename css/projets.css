@@ -1,6 +1,6 @@
 #projets{
       padding: 40px 20px;
-          background-color:#FDFCFB;
+      background-color:#FDFCFB;
       font-family: "Roboto", sans-serif;
      }
 
@@ -25,6 +25,7 @@
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
     }
+
     .projet {
       background:  #FDFCFB;
       padding: 20px;
@@ -42,7 +43,7 @@
       margin-top: 0;
       color:cadetblue;
       font-size: 20px;
-          font-family: "Roboto", sans-serif;
+      font-family: "Roboto", sans-serif;
     }
 
     .projet ul {
@@ -109,7 +110,7 @@
       text-decoration: none;
       border-radius: 8px;
       transition: background0.3s ease;
-          font-family: "Roboto", sans-serif;
+      font-family: "Roboto", sans-serif;
        
     }
 
@@ -142,4 +143,10 @@
   left: 0;
   color: cadetblue;
   font-family: "roboto", sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }

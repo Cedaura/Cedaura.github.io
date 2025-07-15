@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 0px;
     background-color: cadetblue;
     z-index: 110;
     position: absolute;
@@ -14,8 +14,6 @@
     .logo_container {
       width: 5em;
     }
-
-
 
 #menu-list{display: none;
   background-color: cadetblue;
@@ -55,5 +53,20 @@
         display: none;
     }
   
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espace entre logo + menu */
+    padding: 0 1rem; /* Ou ajuster selon ton design */
+}
+
+.logo_container {
+    margin-right: auto; /* Cela pousse tout le reste vers la droite */
+}
+
+#menu-btn {
+    margin-left: auto; /* S’il est trop près du logo */
 }
 
