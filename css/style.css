@@ -10,11 +10,6 @@
 
 
 
-*{ margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
-}
 
 
 h1{display:flex;
@@ -68,7 +63,8 @@ label {
     margin-top: 150px;
       width: 100%;
   overflow: hidden;
-  padding: 2rem;
+  padding: 1rem;
+  
 }
 
 
@@ -84,9 +80,6 @@ label {
      text-align: center;
   }
 
-main{
-  background-color: #FDFCFB;
-}
 
 .carousel-images {
   display: flex;
@@ -95,14 +88,16 @@ main{
   margin-top: 20px;
   flex-wrap: wrap;
   gap: 150px;
+  
 }
+
 
 .carousel .image {
   text-align: center;
   max-width: 400px;
   font-family: "Roboto", sans-serif;
+  
 }
-
 
  #about {
     max-width: 650px;
@@ -150,6 +145,7 @@ main{
 .image {
     width: 220px;
     height: 220px;
+
    
 }
 
@@ -157,12 +153,14 @@ main{
     width: 90%;
     height: auto;
     display: block;  
+    
 }
 
 .image p {
     margin-top: 10px;          /* espace entre image et texte */
     font-size: 1rem;
     color: #333;               /* assure une bonne visibilité */
+    
 }
 .carousel-images {
     display: grid;
@@ -170,6 +168,7 @@ main{
     gap: 16px;
     justify-items: center;
     padding: 16px;
+    
 }
 
 .carousel-images .image {
@@ -182,13 +181,16 @@ main{
     text-align: center;
     cursor: pointer;
     width: 150px; /* fixe la taille du bloc */
+    background-color: transparent;
+    
 }
 
 .carousel-images .image:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    background-color: #fdfdfd;
     z-index: 1;
+    background-color: transparent;
+    
 }
 
 .carousel-images .image img {
@@ -196,13 +198,14 @@ main{
     height: 140px;
     object-fit: cover;
     border-radius: 8px;
+    
 }
 
 .carousel-images .image p {
     margin-top: 8px;
     font-weight: bold;
-    color: #333;
     font-size: 14px;
+    
 }
 
 /* Responsive pour mobile */
@@ -218,6 +221,7 @@ main{
     gap: 50px;
     justify-items: center;
     padding: 20px;
+    
 }
 
 .carousel-images .image {
@@ -229,26 +233,24 @@ main{
     padding: 10px;
     text-align: center;
     cursor: pointer;
+    background-color: transparent;
+  
 }
 
-.carousel-images .image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    background-color: #fdfdfd;
-    z-index: 1;
-}
+
 
 .carousel-images .image img {
     width: 200px;
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
+      
 }
 
 .carousel-images .image p {
     margin-top: 10px;
     font-weight: bold;
-    color: #333;
+   
 }
 
 #about {
@@ -257,4 +259,34 @@ main{
 
 .carousel {
     margin-top: 0; /* supprime l’espace au-dessus du carrousel */
+    
 }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Fond SVG animé en arrière-plan plein écran */
+#bg-wrap {
+  position: absolute;           /* Reste visible même au scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+   z-index: -1;   
+
+  overflow: hidden;
+  pointer-events: none;      /* Ne bloque pas les clics */
+}
+
+#bg-wrap svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
