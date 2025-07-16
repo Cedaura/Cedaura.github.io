@@ -149,37 +149,45 @@ label {
 
 
 
-.bitmoji-floating {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10; /* S'affiche au-dessus du reste */
-  pointer-events: none;
-  animation: floatBitmoji 3s ease-in-out infinite;
-}
 
-.bitmoji-floating img {
-  height: 150px;
-  max-width: 100%;
-  object-fit: contain;
-  opacity: 1;
-}
-
-/* Animation de flottement douce */
-@keyframes floatBitmoji {
-  0% {
-    transform: translate(-50%, -50%) translateY(0px);
-  }
-  50% {
-    transform: translate(-50%, -50%) translateY(-15px);
-  }
-  100% {
-    transform: translate(-50%, -50%) translateY(0px);
-  }
-}
 
 /* .img src1:{display: flex;
   flex-direction: row;
 
 } */
+
+.thumb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+    background-color: transparent; /* <-- Si nécessaire */
+}
+
+.thumb img {
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom:5px;
+}
+
+
+.carousel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  padding: 2rem;
+  border-radius: 20px;
+
+  background: linear-gradient(145deg, #e0f7f7 0%, #ffffffcc 100%);
+  box-shadow: 0 8px 20px rgba(12, 125, 133, 0.1);
+  backdrop-filter: blur(6px);
+}
+.thumb p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
