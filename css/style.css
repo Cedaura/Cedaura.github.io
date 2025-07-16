@@ -7,261 +7,7 @@
 @import url("/composants/formulaire/formulaire.css");
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
 
-
-
-
-
-
-h1{display:flex;
-    justify-content: center;
-    margin-bottom: 50px;
-    margin-top: 150px;
-        font-size: 60px;
-           font-family: "Roboto", sans-serif;
-}
-
-footer p {
-  text-align: left;
-  margin: 2rem 1rem 1rem 1rem; 
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-}
-
-footer {
-  background-color: #FDFCFB;
-  padding: 1rem;
-}
-
-#creations h2{font-size: 20px;
-    font-family: "Roboto", sans-serif;
-}
-
-#about h2{    font-size: 32px;
-    text-align: center;
-    margin-bottom: 10px; 
-    margin-top: 20px;
-        font-family: "Roboto", sans-serif;
-}
-
-#menu-list li a {
-  text-decoration: none;
-  color: black;
-
-}
-#menu-list {
-  list-style: none; 
-  gap: 1.5rem; 
-
-}
-
-label {
-  background-color: cadetblue;
- }
-
-.carousel{display: flex;
-    justify-content: center;
-    margin-top: 150px;
-      width: 100%;
-  overflow: hidden;
-  padding: 1rem;
-  
-}
-
-
-#about p {max-width: 600px; 
-    line-height: 1.6;
-       margin: 0 auto;
-       margin-top: 0; 
-       font-family: roboto, sans-serif;
-       }
-
-.image p{font-family: "Roboto", sans-serif;
-    margin-top: 20px;
-     text-align: center;
-  }
-
-
-.carousel-images {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  margin-top: 20px;
-  flex-wrap: wrap;
-  gap: 150px;
-  
-}
-
-
-.carousel .image {
-  text-align: center;
-  max-width: 400px;
-  font-family: "Roboto", sans-serif;
-  
-}
-
- #about {
-    max-width: 650px;
-    margin: 50px auto;
-    padding: 30px 40px;
-    background: linear-gradient(135deg, #ffffffee, cadetblue);
-    border-radius: 18px;
-    box-shadow:
-      0 8px 20px rgba(12, 125, 133, 0.15),
-      0 0 0 3px transparent;
-    position: relative;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.15rem;
-    line-height: 1.6;
-    color: #3a3a3a;
-    cursor: default;
-    transition: box-shadow 0.4s ease, border-color 0.4s ease;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s forwards ease-out;
-  }
-
-  #about:hover {
-    box-shadow:
-      0 12px 30px rgba(93, 190, 177, 0.3),
-      0 0 0 3px cadetblue;
-  }
-
-  /* animation fade in + montée */
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  #about p {
-    margin: 0;
-  }
-
-  #about a {
-    text-decoration: none;
-}
-
-.image {
-    width: 220px;
-    height: 220px;
-
-   
-}
-
-.image img {
-    width: 90%;
-    height: auto;
-    display: block;  
-    
-}
-
-.image p {
-    margin-top: 10px;          /* espace entre image et texte */
-    font-size: 1rem;
-    color: #333;               /* assure une bonne visibilité */
-    
-}
-.carousel-images {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
-    gap: 16px;
-    justify-items: center;
-    padding: 16px;
-    
-}
-
-.carousel-images .image {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 8px;
-    padding: 8px;
-    text-align: center;
-    cursor: pointer;
-    width: 150px; /* fixe la taille du bloc */
-    background-color: transparent;
-    
-}
-
-.carousel-images .image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    background-color: transparent;
-    
-}
-
-.carousel-images .image img {
-    width: 140px; /* taille réduite */
-    height: 140px;
-    object-fit: cover;
-    border-radius: 8px;
-    
-}
-
-.carousel-images .image p {
-    margin-top: 8px;
-    font-weight: bold;
-    font-size: 14px;
-    
-}
-
-/* Responsive pour mobile */
-@media (max-width: 600px) {
-    .carousel-images {
-        grid-template-columns: 1fr;
-    }
-}
-
-.carousel-images {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
-    justify-items: center;
-    padding: 20px;
-    
-}
-
-.carousel-images .image {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 8px;
-    padding: 10px;
-    text-align: center;
-    cursor: pointer;
-    background-color: transparent;
-  
-}
-
-
-
-.carousel-images .image img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-      
-}
-
-.carousel-images .image p {
-    margin-top: 10px;
-    font-weight: bold;
-   
-}
-
-#about {
-    margin-bottom: 20px; /* ou moins si tu veux un écart plus réduit */
-}
-
-.carousel {
-    margin-top: 0; /* supprime l’espace au-dessus du carrousel */
-    
-}
-
+/* Base */
 html, body {
   margin: 0;
   padding: 0;
@@ -269,19 +15,163 @@ html, body {
   width: 100%;
   overflow-x: hidden;
   position: relative;
+  font-family: "Roboto", sans-serif;
 }
 
-/* Fond SVG animé en arrière-plan plein écran */
+/* Titre principal */
+h1 {
+  display: flex;
+  justify-content: center;
+  margin: 150px 0 50px;
+  font-size: 60px;
+}
+
+/* Footer */
+footer {
+  background-color: #FDFCFB;
+  padding: 1rem;
+}
+
+footer p {
+  text-align: left;
+  margin: 2rem 1rem 1rem;
+  font-size: 14px;
+}
+
+/* Menu */
+#menu-list {
+  list-style: none;
+  gap: 1.5rem;
+}
+
+#menu-list li a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Section About */
+#about {
+  max-width: 650px;
+  margin: 50px auto 20px;
+  padding: 30px 40px;
+  background: linear-gradient(135deg, #ffffffee, cadetblue);
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(12, 125, 133, 0.15);
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #3a3a3a;
+  cursor: default;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards ease-out;
+  transition: box-shadow 0.4s ease, border-color 0.4s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#about:hover {
+  box-shadow: 0 12px 30px rgba(93, 190, 177, 0.3), 0 0 0 3px cadetblue;
+}
+
+#about h2 {
+  font-size: 32px;
+  text-align: center;
+  margin: 20px 0 10px;
+}
+
+#about p {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-family: Roboto, sans-serif;
+}
+
+#about a {
+  text-decoration: none;
+}
+
+/* Carrousel */
+.carousel {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  justify-items: center;
+  padding: 20px;
+}
+
+.carousel-images .image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.carousel-images .image:hover {
+  transform: scale(1.05); /* Zoom sans ombre */
+}
+
+.carousel-images .image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.carousel-images .image p {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .carousel-images {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Créations section */
+#creations h2 {
+  font-size: 20px;
+}
+
+/* Labels */
+label {
+  background-color: cadetblue;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fond SVG animé */
 #bg-wrap {
-  position: absolute;           /* Reste visible même au scroll */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-   z-index: -1;   
-
+  z-index: -1;
   overflow: hidden;
-  pointer-events: none;      /* Ne bloque pas les clics */
+  pointer-events: none;
 }
 
 #bg-wrap svg {
@@ -289,4 +179,3 @@ html, body {
   height: 100%;
   display: block;
 }
-
