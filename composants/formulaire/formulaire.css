@@ -101,3 +101,25 @@ textarea {
 .pied-formulaire button:hover {
   background-color: #0056b3;
 }
+
+/* .boitetest {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.input i {
+  background-color: #e0e0e0;
+  color: #333;
+  border-radius: 50%;
+  padding: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
