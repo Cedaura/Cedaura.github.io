@@ -93,23 +93,6 @@ body {
 }
 
 
-
-
-
-.carousel-images .image:hover {
-  transform: scale(1.05); /* Zoom sans ombre */
-}
-
-
-
-
-/* Responsive */
-@media (max-width: 600px) {
-  .carousel-images {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* Créations section */
 #creations h2 {
   font-size: 20px;
@@ -147,47 +130,30 @@ label {
 }
 
 
-
-
-
-
-/* .img src1:{display: flex;
-  flex-direction: row;
-
-} */
-
 .thumb {
+  width: 200px; /* anciennement 150px, à ajuster selon ton besoin */
+  height: auto;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-    background-color: transparent; /* <-- Si nécessaire */
 }
 
 .thumb img {
-  width: 100px;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom:5px;
+  width: 100%;      /* Remplit tout le conteneur */
+  height: auto;     /* Garde le ratio d'origine */
+  object-fit: contain;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  display: block;
 }
 
-
-.carousel {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 3rem;
-  padding: 2rem;
-  border-radius: 20px;
-
-  background: linear-gradient(145deg, #e0f7f7 0%, #ffffffcc 100%);
-  box-shadow: 0 8px 20px rgba(12, 125, 133, 0.1);
-  backdrop-filter: blur(6px);
-}
 .thumb p {
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #333;
+  font-size: 1.1rem; /* un peu plus grand si l’image est plus grande */
+  font-weight: 600;
 }

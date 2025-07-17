@@ -24,24 +24,21 @@
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
             opacity: 1;
             transition: opacity 0.5s ease-in-out;
+          
         }
 
         .fade-out {
             opacity: 0;
         }
 
-        .thumb {
-            position: absolute;
-            width: 20%;
-            /* responsive */
-            aspect-ratio: 1/1;
-            border: 2px solid #fff;
-            overflow: hidden;
-            border-radius: 8px;
-            cursor: pointer;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s ease;
-        }
+
+.thumb {
+    position: absolute;
+    width: 25%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
 
         .thumb:hover {
             transform: scale(1.1);
@@ -51,16 +48,33 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-        }
+            border: 1px solid #000;
+         }
 
         .top-left {
             top: 5%;
             left: 5%;
+             }
+        .top-left img{
+            object-position: 50% 50%;
+            border-radius: 10px 10px 0 10px ;
+        }
+        .top-left::before{
+            top:125%;
+            left: 120%;
         }
 
         .top-right {
             top: 5%;
             right: 5%;
+        }
+        .top-right img{
+            object-position: 50% 70%;
+            border-radius: 10px 10px 10px 0;
+        }
+        .top-right::before{
+            top: 175px;
+            left: -25%;
         }
 
         .bottom-left {
@@ -68,12 +82,63 @@
             left: 5%;
         }
 
+        .bottom-left img {
+            object-position: 50% 70%;
+            border-radius: 10px 0 10px 10px;
+        }
+
+        .bottom-left::before {
+            top: -35%;
+            left:120%;
+        }
+
+        .bottom-right img {
+            object-position: 50% 70%;
+            border-radius: 0px 10px 10px 10px;
+        }
+
+
         .bottom-right {
             bottom: 5%;
             right: 5%;
         }
 
-        /* Petite amélioration responsive */
+        .bottom-right::before {
+            top: -30%;
+            left:-30%;
+        }
+      
+
+
+
+.thumb::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #000;
+    border-radius: 50%;
+    box-shadow:
+        -12px 16px 0 1px #000,
+        -24px 32px 0 2px #000;
+     z-index: 2;
+}
+.thumb.top-left::before {
+transform: rotateX(180deg);
+
+}
+.thumb.top-right::before {
+    transform: rotate(180deg);
+}
+
+.thumb.bottom-right::before {
+transform: rotate(-90deg);
+}
+
+
+
+
+/* Petite amélioration responsive */
         @media (max-width: 500px) {
             .thumb {
                 width: 25%;
